@@ -13,7 +13,7 @@
               <div class="card-body">
               <h5 class="card-title">{{$producto->descripcion}}</h5>
               <p class="card-text"><b>Precio: </b>{{$producto->precio}}</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="{{route('pedido.index')}}" class="btn btn-primary">Comprar</a>
               </div>
           </div> 
       </div>

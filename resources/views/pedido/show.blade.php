@@ -8,7 +8,7 @@
 
     <h2 class = "text-center">Pedido Nº {{$pedido->id}}</h2>
     {{-- <a href="{{redirect()->back()->getTargetUrl()}}" class="btn btn-danger">Volver</a> --}}
-    <a href="{{route('pedido.index')}}" class="btn btn-danger">Volver</a>
+    <a href="{{route('cliente.index')}}" class="btn btn-danger">Volver</a>
     <br>
     <br>
     <div class="row">

@@ -36,14 +36,23 @@
             <ul class="navbar-nav mx-auto">
               @switch(auth()->user()->rol)
                   @case('cliente')
+
+                   <li class="nav-item px-3">
+                      <a class="nav-link" href="{{route('cliente.index')}}" role="button">
+                      Catalogo
+                      </a>
+                    </li>
+
                       <li class="nav-item dropdown px-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Producto
+                          Pedido
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{route('producto.index')}}">Ver productos</a></li>
+                            <li><a class="dropdown-item" href="{{route('pedido.index')}}">Realizar Pedido</a></li>
                         </ul>
                       </li>
+
+
                       <li class="nav-item">
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
@@ -52,6 +61,7 @@
                             </button>
                         </form>
                       </li>
+
                       @break
                   @case('empleado')
                       <li class="nav-item dropdown px-3">
